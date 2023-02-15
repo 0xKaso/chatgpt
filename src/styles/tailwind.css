@@ -16,3 +16,8 @@
 * {
   font-family: normalFont;
 }
+
+.pixelfont{
+  font-family: pixelFont;
+  font-weight: 300;
+}

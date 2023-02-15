@@ -34,8 +34,8 @@ export function Newsletter() {
           />
           <div className="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-32 gap-y-14 xl:max-w-none xl:grid-cols-2">
             <div>
-              <p className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
-                Stay up to date
+              <p className="font-display text-4xl font-medium tracking-tighter sm:text-5xl pixelfont">
+              STAY UP TO DATE
               </p>
               <p className="mt-4 text-lg tracking-tight">
                 The NFT of ChatFi subsequent version NFT discounts and priority purchase qualifications, and future pledge rewards

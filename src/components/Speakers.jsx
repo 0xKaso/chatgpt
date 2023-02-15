@@ -177,9 +177,9 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter sm:text-5xl"
+            className="font-display pixelfont text-4xl font-medium tracking-tighter sm:text-5xl"
           >
-            ChatFi and the GPT Users
+            CHATFI AND THE GPT USERS
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight">
             In the trend of chatGPT, there are always a group of pioneers who

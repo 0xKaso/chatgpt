@@ -49,7 +49,7 @@ export function Header() {
         <div className="mt-10 lg:mt-0 lg:grow lg:basis-0">
           <Logo className="h-12 w-auto text-slate-900" />
         </div>
-        <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+        <div className="mt-5 sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button>
             <Profile></Profile>
           </Button>

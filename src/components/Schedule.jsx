@@ -220,8 +220,8 @@ export function Schedule() {
     <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32">
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl">
-            More about the GPT Users
+          <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl pixelfont">
+            MORE ABOUT THE GPT USERS
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight">
             Holders of "the GPT Users" can enjoy continuously available chatGPT
