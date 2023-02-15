@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: pixelFont;
+  src: url('./bb3273.ttf');
+}
+
+@font-face {
+  font-family: normalFont;
+  src: url('./DMSans-Regular.ttf');
+}
+
+
+* {
+  font-family: normalFont;
+}
