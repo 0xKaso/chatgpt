@@ -233,14 +233,6 @@ export function Schedule() {
       </Container>
       <div className="relative mt-14 sm:mt-24">
         <div className="absolute inset-x-0 -top-40 -bottom-32 overflow-hidden">
-          <Image
-            className="absolute left-full top-0 -translate-x-1/2 sm:left-1/2 sm:translate-y-[-15%] sm:translate-x-[-20%] md:translate-x-0 lg:translate-x-[5%] lg:translate-y-[4%] xl:translate-y-[-8%] xl:translate-x-[27%]"
-            // src={backgroundImage}
-            alt=""
-            width={918}
-            height={1495}
-            unoptimized
-          />
           <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
         </div>
