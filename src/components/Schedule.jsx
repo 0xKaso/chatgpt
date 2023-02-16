@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -9,13 +8,14 @@ import backgroundImage from '@/images/background.jpg'
 const schedule = [
   {
     date: '2023Q1',
-    dateTime: '2023-03-01',
+    dateTime: '0',
     summary:
       'The first day of the conference is focused on dark patterns for ecommerce.',
     timeSlots: [
       {
         name: 'the GPT Bots',
-        description: 'Launched a rarer V2 version NFT "the GPT Bot", holders of V1 can enjoy priority purchase and discounts',
+        description:
+          'Launched a rarer V2 version NFT "the GPT Bot", holders of V1 can enjoy priority purchase and discounts',
         // start: '9:00AM',
         // end: '10:00AM',
       },
@@ -28,8 +28,7 @@ const schedule = [
       },
       {
         name: 'More',
-        description:
-          'Will not be announced yet, so stay tuned',
+        description: 'Will not be announced yet, so stay tuned',
         // start: '9:00AM',
         // end: '10:00AM',
       },
@@ -37,13 +36,14 @@ const schedule = [
   },
   {
     date: '2023Q2',
-    dateTime: '2022-06-01',
+    dateTime: '1',
     summary:
       'Next we spend the day talking about deceiving people with technology.',
     timeSlots: [
       {
         name: 'the GPT Bots',
-        description: 'Launched a rarer V2 version NFT "the GPT Bot", holders of V1 can enjoy priority purchase and discounts',
+        description:
+          'Launched a rarer V2 version NFT "the GPT Bot", holders of V1 can enjoy priority purchase and discounts',
         // start: '9:00AM',
         // end: '10:00AM',
       },
@@ -56,8 +56,7 @@ const schedule = [
       },
       {
         name: 'More',
-        description:
-          'Will not be announced yet, so stay tuned',
+        description: 'Will not be announced yet, so stay tuned',
         // start: '9:00AM',
         // end: '10:00AM',
       },
@@ -65,7 +64,7 @@ const schedule = [
   },
   {
     date: '2023Q2',
-    dateTime: '2022-06-01',
+    dateTime: '2',
     summary:
       'We close out the event previewing new techniques that are still in development.',
     timeSlots: [
@@ -77,21 +76,18 @@ const schedule = [
       },
       {
         name: 'Staking & Deployment',
-        description:
-          'Will not be announced yet, so stay tuned',
+        description: 'Will not be announced yet, so stay tuned',
         // start: '9:00AM',
         // end: '10:00AM',
       },
       {
         name: 'More',
-        description:
-          'Will not be announced yet, so stay tuned',
+        description: 'Will not be announced yet, so stay tuned',
         // start: '9:00AM',
         // end: '10:00AM',
       },
     ],
   },
- 
 ]
 
 function ScheduleTabbed() {
@@ -220,7 +216,7 @@ export function Schedule() {
     <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32">
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-medium tracking-tighter sm:text-5xl pixelfont">
+          <h2 className="pixelfont font-display text-4xl font-medium tracking-tighter sm:text-5xl">
             MORE ABOUT THE GPT USERS
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight">
