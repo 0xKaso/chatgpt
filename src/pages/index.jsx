@@ -13,7 +13,10 @@ import { getDefaultProvider } from 'ethers'
 
 const client = createClient({
   autoConnect: true,
-  provider: getDefaultProvider(),
+  provider: getDefaultProvider({
+    name: "goerli",
+    chainId: 0x05,
+  }),
 })
 
 export default function Home() {

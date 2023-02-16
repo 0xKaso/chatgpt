@@ -2,18 +2,50 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background.jpg'
 
 import { useState } from 'react'
 
-export function Hero() {
-  const [amount, setAmount] = useState(0)
+import { ethers } from 'ethers'
 
-  function Controller(params) {
+// import {parseEther} from "ethers/utils"
+
+import {
+  usePrepareContractWrite,
+  useContractWrite,
+  useWaitForTransaction,
+} from 'wagmi'
+import { address, abi } from './contract/main'
+
+export function Hero() {
+  const [amount, setAmount] = useState(1)
+
+  const {
+    config,
+    error: prepareError,
+    isError: isPrepareError,
+  } = usePrepareContractWrite({
+    address,
+    abi,
+    functionName: 'mintGuest',
+    args: [parseInt(amount)],
+    enabled: Boolean(amount),
+    chainId: 5,
+    overrides: {
+      value: ethers.utils.parseEther('0.02').mul(amount),
+    },
+  })
+
+  const { data, error, isError, write } = useContractWrite(config)
+
+  const { isLoading, isSuccess } = useWaitForTransaction({
+    hash: data?.hash,
+  })
+
+  function Controller() {
     return (
       <div>
         <button
-          onClick={() => setAmount((v) => (v - 1 < 0 ? 0 : v - 1))}
+          onClick={() => setAmount((v) => (v - 1 < 1 ? 1 : v - 1))}
           className="hover:bg-grey inline-flex justify-center rounded-2xl bg-black p-2 text-base font-semibold text-white focus:outline-none focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-blue-500 active:text-white/70"
         >
           -
@@ -34,13 +66,39 @@ export function Hero() {
   function Mint(params) {
     return (
       <div>
-        {amount * 0.02}ETH &nbsp;&nbsp;
+        {amount * 0.02} ETH &nbsp;&nbsp;
         <button
-          onClick={()=>{console.log("mint")}}
+          disabled={!write}
+          onClick={() => {
+            console.log('Writing')
+            write?.()
+          }}
           className="hover:bg-grey inline-flex justify-center rounded-2xl bg-black p-2 text-base font-semibold text-white focus:outline-none focus-visible:outline-1 focus-visible:outline-offset-1 focus-visible:outline-blue-500 active:text-white/70"
         >
-          🤖️ Mint 🤖️
+          🤖️ {isLoading ? 'Minting...' : 'Mint'} 🤖️
         </button>
+        <div className="text-sm text-red-600">
+          {(isPrepareError || isError) && (
+            <div>
+              Error: &nbsp;
+              {/* {(prepareError || error)?.message} */}
+              Captured by aliens...
+            </div>
+          )}
+          {isSuccess && (
+            <div className="text-sm text-green-600">
+              Successfully minted your NFT!
+              <div>
+                <a
+                  className="underline"
+                  href={`https://goerli.etherscan.io/tx/${data?.hash}`}
+                >
+                  Tranciations on Etherscan
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     )
   }
@@ -85,7 +143,7 @@ export function Hero() {
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-16 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Mint Price', '0.02ETH'],
+              ['Mint Price', '0.02 ETH'],
               ['Mint Time', '2023/11/09 18:00'],
               ['Quantity', Controller()],
               ['Mint Cost', Mint()],
