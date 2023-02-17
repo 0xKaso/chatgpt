@@ -66,7 +66,7 @@ export function Hero() {
   function Mint(params) {
     return (
       <div>
-        {amount * 0.02} ETH &nbsp;&nbsp;
+        {amount * 0.009} ETH &nbsp;&nbsp;
         <button
           disabled={!write}
           onClick={() => {
@@ -106,15 +106,6 @@ export function Hero() {
   return (
     <div className="relative pt-10 pb-20 sm:py-24">
       <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden">
-        <Image
-          className="absolute top-0 left-0 translate-y-[-10%] translate-x-[-55%] -scale-x-100 sm:left-1/2 sm:translate-y-[-6%] sm:translate-x-[-98%] lg:translate-x-[-106%] xl:translate-x-[-122%]"
-          // src={backgroundImage}
-          alt=""
-          width={918}
-          height={1495}
-          priority
-          unoptimized
-        />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white" />
       </div>
@@ -143,10 +134,11 @@ export function Hero() {
           </Button>
           <dl className="mt-10 grid grid-cols-2 gap-y-6 gap-x-10 sm:mt-16 sm:gap-y-10 sm:gap-x-16 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
-              ['Mint Price', '0.02 ETH'],
-              ['Mint Time', '2023/11/09 18:00'],
+              ['Mint Price', '0.009 ETH'],
+              ['Mint Time', '2023/02/19 20:00(SGT)'],
               ['Quantity', Controller()],
-              ['Mint Cost', Mint()],
+              // ['Mint Cost', Mint()],
+              ["Mint","Coming Soon"]
             ].map(([name, value]) => (
               <div key={name}>
                 <dt className="text-black-600 font-mono text-sm">{name}</dt>

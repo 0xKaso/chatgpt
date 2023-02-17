@@ -10,7 +10,7 @@ const schedule = [
     date: '2023Q1',
     dateTime: '0',
     summary:
-      'The first day of the conference is focused on dark patterns for ecommerce.',
+      'Customizing relevant rights and interests play based on the V1 version of "the GPT USERS"',
     timeSlots: [
       {
         name: 'the GPT Bots',
@@ -38,7 +38,7 @@ const schedule = [
     date: '2023Q2',
     dateTime: '1',
     summary:
-      'Next we spend the day talking about deceiving people with technology.',
+      'Launch V2 version of "THE GPT BOTS" and launch Gamefi based on ChatGPT\'s play to earn',
     timeSlots: [
       {
         name: 'the GPT Bots',
@@ -66,7 +66,7 @@ const schedule = [
     date: '2023Q2',
     dateTime: '2',
     summary:
-      'We close out the event previewing new techniques that are still in development.',
+      'Launch the latest burning game and stacking mechanism',
     timeSlots: [
       {
         name: 'Burning Gameplay',
